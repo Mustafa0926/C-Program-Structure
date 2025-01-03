@@ -1,0 +1,100 @@
+// 1) Preprocessor Directives
+    // These are instructions that are executed before the compilation of the program. They include directives to include header files or define macros.
+
+#include <stdio.h>  // Standard Input/Output functions
+#include <stdlib.h> // Standard library functions (e.g., memory allocation)
+#include <string.h> // String handling functions (if needed)
+#define PI 3.14159  // Example of defining a macro
+
+
+// 2) Global Declarations\
+    //These provide a declaration of functions before their actual definition. This is useful for organizing code and allowing functions to call each other.
+
+void myFunction();      // Function with no arguments and no return value
+int addNumbers(int a, int b); // Function returning an int and taking two int arguments
+
+
+// 3) Function Prototypes
+    // These provide a declaration of functions before their actual definition. This is useful for organizing code and allowing functions to call each other.
+
+void myFunction();      // Function with no arguments and no return value
+int addNumbers(int a, int b); // Function returning an int and taking two int arguments
+
+
+// 4) Main Function
+   // The main() function is the entry point of any C program. Execution starts here.
+
+int main() {
+    // Variable declarations
+    int a = 5, b = 10;
+
+    // Function calls
+    int sum = addNumbers(a, b);
+    printf("The sum is: %d\n", sum);
+
+    // Return statement
+    return 0;
+}
+
+
+// 5) Other Function Definitions
+   //These are additional functions defined outside the main() function. Each function performs a specific task.
+
+// Function to print a message
+void myFunction() {
+    printf("Hello from myFunction!\n");
+}
+
+// Function to add two numbers
+int addNumbers(int a, int b) {
+    return a + b;
+}
+
+
+// 6) Comments
+  // Comments are essential for code readability and maintenance.
+  // Single-line comments: Use // for comments that fit on one line.
+  // Multi-line comments: Use /* */ for comments spanning multiple lines.
+
+// This is a single-line comment
+
+/*
+This is a 
+multi-line comment
+*/
+
+// Example Full Program
+ #include <stdio.h>  // Include standard I/O header
+
+// Global variable
+int global_variable = 10;
+
+// Function prototypes
+void printMessage();
+int addNumbers(int a, int b);
+
+// Main function
+int main() {
+    int a = 5, b = 10;  // Local variables
+
+    // Call a function to print a message
+    printMessage();
+
+    // Add numbers and display the result
+    int sum = addNumbers(a, b);
+    printf("The sum of %d and %d is: %d\n", a, b, sum);
+
+    return 0; // Indicate successful program termination
+}
+
+// Function to print a message
+void printMessage() {
+    printf("Hello, welcome to the C program!\n");
+}
+
+// Function to add two numbers
+int addNumbers(int a, int b) {
+    return a + b;
+}
+
+
